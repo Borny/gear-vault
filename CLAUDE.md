@@ -1,6 +1,8 @@
 # Gear Vault
 
-A personal inventory app: know what I own, where it is, and what to pack for each activity. Status: **planning** (no app code yet; everything lives in `context/`).
+A personal inventory app: know what I own, where it is, and what to pack for each activity. Status: **Phase 0** (Next.js scaffold + offline prototype).
+
+@AGENTS.md
 
 ## Context files
 
@@ -53,4 +55,8 @@ Ask before large refactors or architectural changes. Never delete files without 
 
 ## Commands
 
-None yet: the Next.js app hasn't been scaffolded. Add `dev`, `build`, `lint` and Prisma commands here once it is.
+- `npm run dev`: dev server (the service worker doesn't cache in dev)
+- `npm run build` then `npm run start`: production build, needed to test offline behaviour
+- `npm run lint`: ESLint
+
+Add Prisma commands here once the database is set up.
