@@ -39,3 +39,4 @@ Spec: @context/features/phase-0-offline-prototype.md
 <!-- Keep this updated. Earliest to latest -->
 
 - 26 November 2026: added CLAUDE.md and context docs
+- 26 November 2026: Phase 0 offline prototype (Next.js scaffold, Serwist, offline fallback, manifest)

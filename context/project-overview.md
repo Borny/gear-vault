@@ -28,21 +28,21 @@ Items marked 💡 are proposals that go beyond the original notes. Accept, chang
 
 I own a lot of things and can't keep track of them.
 
-| Pain | What Gear Vault does |
-| --- | --- |
-| I don't know everything I have | One list of everything I own |
+| Pain                                | What Gear Vault does                                |
+| ----------------------------------- | --------------------------------------------------- |
+| I don't know everything I have      | One list of everything I own                        |
 | I spend too long looking for things | Record where each item is, even split across places |
-| I forget gear for activities | A list of what each activity needs |
+| I forget gear for activities        | A list of what each activity needs                  |
 
 ---
 
 ## 👥 Users
 
-| Person | Uses the app | Owns items | Notes |
-| --- | :---: | :---: | --- |
-| **Me** | ✅ | ✅ | The only user for now; this is my vault |
-| **Bela** | Later | ✅ | It could help her too |
-| **Elanor** | ❌ | ✅ | Many things in the house are hers |
+| Person     | Uses the app | Owns items | Notes                                   |
+| ---------- | :----------: | :--------: | --------------------------------------- |
+| **Me**     |      ✅      |     ✅     | The only user for now; this is my vault |
+| **Bela**   |    Later     |     ✅     | It could help her too                   |
+| **Elanor** |      ❌      |     ✅     | Many things in the house are hers       |
 
 The vault can hold things belonging to someone else, so **an owner does not need an account**. The data model separates `Person` (owns things) from `User` (logs in).
 
@@ -52,19 +52,19 @@ The vault can hold things belonging to someone else, so **an owner does not need
 
 ### MVP
 
-| | Feature | Details |
-| :---: | --- | --- |
-| 📋 | **Item list** | Browse everything |
-| ✏️ | **Item CRUD** | Create, view, update, delete |
-| 🗂️ | **Filters** | Category, subcategory, location |
-| 🔍 | **Search** | 💡 Name, brand, description |
-| 🏷️ | **Item fields** | Name, picture, icon, category, brand, quantity, location |
-| 🔢 | **Split quantities** | One item can be spread across several locations |
-| 🧗 | **Activity lists** | The things needed for each activity |
-| 📚 | **Collections** | View items grouped by category |
-| 🔐 | **Authentication** | Email and password |
-| 🌙 | **Dark mode** | Default; light mode optional |
-| 📱 | **PWA** | Installable, works on mobile and offline |
+|     | Feature              | Details                                                  |
+| :-: | -------------------- | -------------------------------------------------------- |
+| 📋  | **Item list**        | Browse everything                                        |
+| ✏️  | **Item CRUD**        | Create, view, update, delete                             |
+| 🗂️  | **Filters**          | Category, subcategory, location                          |
+| 🔍  | **Search**           | 💡 Name, brand, description                              |
+| 🏷️  | **Item fields**      | Name, picture, icon, category, brand, quantity, location |
+| 🔢  | **Split quantities** | One item can be spread across several locations          |
+| 🧗  | **Activity lists**   | The things needed for each activity                      |
+| 📚  | **Collections**      | View items grouped by category                           |
+| 🔐  | **Authentication**   | Email and password                                       |
+| 🌙  | **Dark mode**        | Default; light mode optional                             |
+| 📱  | **PWA**              | Installable, works on mobile and offline                 |
 
 **Offline scope for v1:** installable PWA; browse, search and filter offline, including activity lists. Adding and editing need a connection.
 
@@ -359,22 +359,22 @@ model ActivityItem {
 
 ## 🧱 Tech stack
 
-| Layer | Choice | Source |
-| --- | --- | --- |
-| ⚛️ Framework | [Next.js](https://nextjs.org/docs) (16.x) + [React](https://react.dev) | Notes |
-| 🔷 Language | [TypeScript](https://www.typescriptlang.org/docs/) | Notes |
-| 🖥️ Rendering | Server-rendered pages with dynamic client components | Notes |
-| 🔌 Backend | API routes (items, activities, uploads) | Notes |
-| 📦 Repo | Single codebase | Notes |
-| 🐘 Database | [PostgreSQL](https://www.postgresql.org/docs/), hosted on [Neon](https://neon.com/docs) | 💡 |
-| 🔺 ORM | [Prisma](https://www.prisma.io/docs) | 💡 |
-| 🔐 Auth | [Better Auth](https://www.better-auth.com/docs) (email and password) | 💡 |
-| 🖼️ Images | [Cloudflare R2](https://developers.cloudflare.com/r2/) | 💡 |
-| 🎨 Styling | [Tailwind CSS](https://tailwindcss.com/docs) + [shadcn/ui](https://ui.shadcn.com) | 💡 |
-| ✴️ Icons | [Lucide](https://lucide.dev) | 💡 |
-| 📱 PWA | [Serwist](https://serwist.pages.dev) | 💡 |
-| 💾 Offline data | IndexedDB via [Dexie](https://dexie.org) | 💡 |
-| 🚀 Hosting | [Vercel](https://vercel.com/docs) | 💡 |
+| Layer           | Choice                                                                                  | Source |
+| --------------- | --------------------------------------------------------------------------------------- | ------ |
+| ⚛️ Framework    | [Next.js](https://nextjs.org/docs) (16.x) + [React](https://react.dev)                  | Notes  |
+| 🔷 Language     | [TypeScript](https://www.typescriptlang.org/docs/)                                      | Notes  |
+| 🖥️ Rendering    | Server-rendered pages with dynamic client components                                    | Notes  |
+| 🔌 Backend      | API routes (items, activities, uploads)                                                 | Notes  |
+| 📦 Repo         | Single codebase                                                                         | Notes  |
+| 🐘 Database     | [PostgreSQL](https://www.postgresql.org/docs/), hosted on [Neon](https://neon.com/docs) | 💡     |
+| 🔺 ORM          | [Prisma](https://www.prisma.io/docs)                                                    | 💡     |
+| 🔐 Auth         | [Better Auth](https://www.better-auth.com/docs) (email and password)                    | 💡     |
+| 🖼️ Images       | [Cloudflare R2](https://developers.cloudflare.com/r2/)                                  | 💡     |
+| 🎨 Styling      | [Tailwind CSS](https://tailwindcss.com/docs) + [shadcn/ui](https://ui.shadcn.com)       | 💡     |
+| ✴️ Icons        | [Lucide](https://lucide.dev)                                                            | 💡     |
+| 📱 PWA          | [Serwist](https://serwist.pages.dev)                                                    | 💡     |
+| 💾 Offline data | IndexedDB via [Dexie](https://dexie.org)                                                | 💡     |
+| 🚀 Hosting      | [Vercel](https://vercel.com/docs)                                                       | 💡     |
 
 **Watch out for**
 
@@ -438,17 +438,17 @@ sequenceDiagram
 
 ### 💡 Suggested routes
 
-| Route | Purpose |
-| --- | --- |
-| `/sign-in` | Email and password |
-| `/` | Collections and items |
+| Route                           | Purpose                    |
+| ------------------------------- | -------------------------- |
+| `/sign-in`                      | Email and password         |
+| `/`                             | Collections and items      |
 | `/items?category=&location=&q=` | Filtered and searched list |
-| `/items/[id]` | Item drawer, linkable |
-| `/collections/[id]` | One category |
-| `/activities` | Activity lists |
-| `/api/items`, `/api/items/[id]` | Item CRUD |
-| `/api/activities` | Activity list CRUD |
-| `/api/uploads` | Picture upload |
+| `/items/[id]`                   | Item drawer, linkable      |
+| `/collections/[id]`             | One category               |
+| `/activities`                   | Activity lists             |
+| `/api/items`, `/api/items/[id]` | Item CRUD                  |
+| `/api/activities`               | Activity list CRUD         |
+| `/api/uploads`                  | Picture upload             |
 
 ---
 
@@ -486,20 +486,21 @@ sequenceDiagram
 - **Colour coding:** collection cards take a background colour from what they mostly hold (💡 the dominant subcategory); item cards take a border colour from their category.
 - **Item details:** open in a quick-access drawer.
 - **Responsive:** desktop-first, fully usable on mobile.
+- **Fonts:** Octin Stencil (SemiBold), Barlow Condensed (Light, Regular, Medium, SemiBold)
 
 ### 💡 Category colours and icons
 
 The notes listed types such as Snippet, Prompt and Command, which don't fit a gear inventory. Their palette is reused here with example gear categories. Your [schema draft](#schema-draft-dbml) has the real list, which still needs colours and icons.
 
-| Category | Colour | Hex | [Lucide](https://lucide.dev/icons) icon |
-| --- | :---: | --- | --- |
-| Camping & outdoor | 🔵 | `#3b82f6` | `tent` |
-| Photo & video | 🟣 | `#8b5cf6` | `camera` |
-| Tools & DIY | 🟠 | `#f97316` | `wrench` |
-| Sports | 🟡 | `#fde047` | `dumbbell` |
-| Other | ⚪ | `#6b7280` | `package` |
-| Clothing | 🩷 | `#ec4899` | `shirt` |
-| Electronics | 🟢 | `#10b981` | `cable` |
+| Category          | Colour | Hex       | [Lucide](https://lucide.dev/icons) icon |
+| ----------------- | :----: | --------- | --------------------------------------- |
+| Camping & outdoor |   🔵   | `#3b82f6` | `tent`                                  |
+| Photo & video     |   🟣   | `#8b5cf6` | `camera`                                |
+| Tools & DIY       |   🟠   | `#f97316` | `wrench`                                |
+| Sports            |   🟡   | `#fde047` | `dumbbell`                              |
+| Other             |   ⚪   | `#6b7280` | `package`                               |
+| Clothing          |   🩷   | `#ec4899` | `shirt`                                 |
+| Electronics       |   🟢   | `#10b981` | `cable`                                 |
 
 Show the icon or name alongside the colour, and check yellow's contrast in light mode.
 
@@ -522,29 +523,29 @@ Show the icon or name alongside the colour, and check yellow's contrast in light
 
 💡 Suggested order:
 
-| Phase | Scope | Done when |
-| --- | --- | --- |
-| **0. Foundations** | Project setup, database, auth, offline prototype | I can sign in, and a page opens offline |
-| **1. Inventory** | Item CRUD, pictures, categories, locations, split quantities | My first box of gear is catalogued |
-| **2. Find** | Search, filters, collections | I can locate an item in seconds |
-| **3. Activities** | Activity lists | I can see what an activity needs |
-| **4. PWA and polish** | Install, offline browsing, theme, skeletons, toasts | It works on my phone without signal |
-| **Later** | Offline editing, packing mode, import/export, QR labels | |
+| Phase                 | Scope                                                        | Done when                               |
+| --------------------- | ------------------------------------------------------------ | --------------------------------------- |
+| **0. Foundations**    | Project setup, database, auth, offline prototype             | I can sign in, and a page opens offline |
+| **1. Inventory**      | Item CRUD, pictures, categories, locations, split quantities | My first box of gear is catalogued      |
+| **2. Find**           | Search, filters, collections                                 | I can locate an item in seconds         |
+| **3. Activities**     | Activity lists                                               | I can see what an activity needs        |
+| **4. PWA and polish** | Install, offline browsing, theme, skeletons, toasts          | It works on my phone without signal     |
+| **Later**             | Offline editing, packing mode, import/export, QR labels      |                                         |
 
 ---
 
 ## ✅ Decisions
 
-| Question | Decision (26 November 2026) |
-| --- | --- |
-| Activity lists in the MVP? | Yes |
-| Who uses the vault? | Only me for now |
-| Offline | Read-only is enough; it must be a PWA |
-| Split quantities across locations? | Yes |
-| Subcategory parents | Confirmed |
-| Lending tracking | Not for now |
-| AI features | Not for now |
-| Personal or SaaS? | Personal for now |
+| Question                           | Decision (26 November 2026)           |
+| ---------------------------------- | ------------------------------------- |
+| Activity lists in the MVP?         | Yes                                   |
+| Who uses the vault?                | Only me for now                       |
+| Offline                            | Read-only is enough; it must be a PWA |
+| Split quantities across locations? | Yes                                   |
+| Subcategory parents                | Confirmed                             |
+| Lending tracking                   | Not for now                           |
+| AI features                        | Not for now                           |
+| Personal or SaaS?                  | Personal for now                      |
 
 ---
 
@@ -556,6 +557,7 @@ Show the icon or name alongside the colour, and check yellow's contrast in light
 - [Serwist documentation](https://serwist.pages.dev)
 - [MDN: Progressive Web Apps](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
 - [Mermaid syntax](https://mermaid.js.org/intro/)
+- Design: https://interfaceingame.com/games/tom-clancys-ghost-recon-breakpoint/
 
 ---
 
