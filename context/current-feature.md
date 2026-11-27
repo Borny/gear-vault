@@ -4,7 +4,7 @@ Mock data dashboard
 
 ## Status
 
-In Progress
+Completed
 
 ## Goals
 
@@ -33,3 +33,4 @@ In Progress
 
 - 26 November 2026: added CLAUDE.md and context docs
 - 26 November 2026: Phase 0 offline prototype (Next.js scaffold, Serwist, offline fallback, manifest)
+- 27 November 2026: mock data dashboard (typed mock data from inventory.csv, query layer, dark dashboard on `/`; two items per category for now)
