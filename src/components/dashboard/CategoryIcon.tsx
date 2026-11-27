@@ -1,0 +1,85 @@
+import {
+  Backpack,
+  Bike,
+  Blocks,
+  BookOpen,
+  Boxes,
+  Cable,
+  Camera,
+  Caravan,
+  Cpu,
+  Drill,
+  Drum,
+  Dumbbell,
+  Flame,
+  Footprints,
+  Gamepad2,
+  Hammer,
+  HardDrive,
+  Headphones,
+  HeartPulse,
+  Languages,
+  Monitor,
+  Music,
+  Newspaper,
+  Package,
+  PenTool,
+  Shirt,
+  Smartphone,
+  Snowflake,
+  Sofa,
+  Tent,
+  Watch,
+  Waves,
+  Wrench,
+  Zap,
+  type LucideIcon,
+} from "lucide-react";
+
+// Lucide names stored in the data, mapped to components
+const ICONS: Record<string, LucideIcon> = {
+  backpack: Backpack,
+  bike: Bike,
+  blocks: Blocks,
+  "book-open": BookOpen,
+  boxes: Boxes,
+  cable: Cable,
+  camera: Camera,
+  caravan: Caravan,
+  cpu: Cpu,
+  drill: Drill,
+  drum: Drum,
+  dumbbell: Dumbbell,
+  flame: Flame,
+  footprints: Footprints,
+  "gamepad-2": Gamepad2,
+  hammer: Hammer,
+  "hard-drive": HardDrive,
+  headphones: Headphones,
+  "heart-pulse": HeartPulse,
+  languages: Languages,
+  monitor: Monitor,
+  music: Music,
+  newspaper: Newspaper,
+  package: Package,
+  "pen-tool": PenTool,
+  shirt: Shirt,
+  smartphone: Smartphone,
+  snowflake: Snowflake,
+  sofa: Sofa,
+  tent: Tent,
+  watch: Watch,
+  waves: Waves,
+  wrench: Wrench,
+  zap: Zap,
+};
+
+interface CategoryIconProps {
+  name: string;
+  className?: string;
+}
+
+export function CategoryIcon({ name, className }: CategoryIconProps) {
+  const Icon = ICONS[name] ?? Package;
+  return <Icon aria-hidden className={className} strokeWidth={1.5} />;
+}

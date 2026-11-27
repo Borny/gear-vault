@@ -1,38 +1,31 @@
 # Current Feature
 
-<!-- Feature Name -->
-
-Phase 0: offline prototype
+Mock data dashboard
 
 ## Status
-
-<!-- Not Started|In Progress|Completed -->
 
 In Progress
 
 ## Goals
 
-<!-- Goals & requirements -->
+- `src/lib/mock-data.ts`: typed mock data drawn from `context/inventory.csv`, shaped like the Prisma draft (categories and subcategories, nested locations, people, items, stock rows, activities)
+- `src/lib/inventory.ts`: async query functions the page uses, so only this file changes when Prisma replaces the mock data
+- Dashboard on `/` following the overview layout: sidebar (categories with subcategories, activities), top bar, collection cards coloured by category, item cards with a category-coloured border
+- Dark Breakpoint-style theme in `globals.css` (`@theme`), Barlow Condensed via `next/font`, Lucide icons
+- `npm run build` and `npm run lint` pass
 
-- Scaffold the Next.js app in the repo root
-- Add Serwist (Turbopack) so a server-rendered page opens with the server stopped
-- Offline fallback page for pages never visited
-- Web app manifest and icons so the app is installable
-- `npm run build` passes
+## Out of scope
 
-Spec: @context/features/phase-0-offline-prototype.md
+- Item drawer, filters, search, item CRUD, database, auth
+- Mobile sidebar drawer (the sidebar is hidden below `md` for now)
 
 ## Notes
 
-<!-- Any extra notes -->
-
-- Uses `src/` (per coding standards), so paths are `src/app/...` instead of the spec's `app/...`.
-- Serwist caching only works in a production build (`npm run build && npm run start`).
-- Database and sign-in are out of scope; they complete the Phase 0 "done when".
-- Icons in `public/` are placeholders (GV on dark, lime outline).
-- npm blocked the install scripts for `esbuild` and `@swc/core`; the build works without them.
-- Verified: build and lint pass; `/serwist/sw.js`, the manifest, `/~offline` and the icons are served, and `/~offline` is precached.
-- Browser test passed (26 November 2026, Windows browser via WSL): with the server stopped, `/` showed the saved page and `/never-visited` showed the offline message.
+- Locations and owners in the mock data are placeholders; the CSV has neither.
+- The search box and Add button are placeholders (disabled).
+- `Category.color` holds a palette key (`"blue"`), not a hex: Tailwind can't build classes from runtime values and inline styles are banned. `src/lib/category-colors.ts` maps keys to classes.
+- Octin Stencil is a commercial font and isn't in the repo; headings use Barlow Condensed SemiBold until a licensed file is added to `src/app/fonts/`.
+- Verified: build and lint pass; `/` server-renders 15 collections and 124 items, split stock rows and unknown locations. Browser check still to do (headless Chromium in WSL lacks `libnspr4`).
 
 ## History
 
